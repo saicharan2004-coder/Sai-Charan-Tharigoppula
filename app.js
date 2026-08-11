@@ -83,7 +83,7 @@ function renderProjectPage() {
     document.getElementById("project-title").textContent = "Project not found";
     return;
   }
-  document.title = `${p.title} | Sai Charan`;
+  document.title = `${p.title} | Sai Charan Tharigoppula`;
   document.getElementById("project-title").textContent = p.title;
   document.getElementById("project-description").textContent = p.description;
   document.getElementById("project-tags").innerHTML = p.tags.map(t => `<span class="tag">${t}</span>`).join("");
