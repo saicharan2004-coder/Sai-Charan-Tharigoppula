@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-linkedin]").forEach(el => el.href = SITE.linkedin);
   document.querySelectorAll("[data-github]").forEach(el => el.href = SITE.github);
   document.querySelectorAll("[data-leetcode]").forEach(el => el.href = SITE.leetcode);
+  document.querySelectorAll("[data-location]").forEach(el => el.textContent = SITE.location);
 
   const path = location.pathname.split("/").pop() || "index.html";
   document.querySelectorAll(".nav-links a").forEach(a => {
