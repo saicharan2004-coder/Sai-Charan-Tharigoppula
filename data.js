@@ -1,14 +1,14 @@
 const SITE = {
   name: "Sai Charan Tharigoppula",
   role: "AI Engineer",
-  tagline: "Building Enterprise AI Agents, Grounded LLM Applications & Intelligent Automation",
+  tagline: "Architecting Enterprise AI Agents, Production RAG Pipelines & Intelligent Automation",
   location: "Hyderabad, India",
   email: "tharigoppulasaicharan@gmail.com",
   linkedin: "https://www.linkedin.com/in/saicharantharigoppula/",
   github: "https://github.com/saicharan2004-coder",
   leetcode: "https://leetcode.com/u/saicharan_2004/",
   resume: "#",
-  availability: "Open to AI Engineering opportunities, technical collaborations, and challenging enterprise projects."
+  availability: "Available for full-time AI Engineering roles, enterprise AI consulting, and technical collaborations."
 };
 
 const SKILLS = {
