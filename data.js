@@ -12,90 +12,136 @@ const SITE = {
 };
 
 const SKILLS = {
-  "AI & LLM": ["LLMs", "OpenAI", "Claude", "AI Agents", "Agentic Workflows", "RAG", "Vector Databases", "LangGraph"],
-  "Engineering": ["Python", "FastAPI", "REST APIs", "System Integrations", "CI/CD", "Production Deployments", "Distributed Systems"],
-  "Microsoft & Cloud": ["Azure AI", "Microsoft Copilot", "Copilot Studio", "Power Platform", "Power Automate", "SharePoint", "Dataverse"]
+  "AI & LLM": ["LLMs", "OpenAI", "Claude", "AI Agents", "Agentic Workflows", "RAG", "Vector Databases", "LangChain", "LangGraph"],
+  "Engineering & ML": ["Python", "YOLOv8", "Roboflow", "PyTorch", "TensorFlow", "Computer Vision", "FastAPI", "REST APIs"],
+  "Microsoft & Cloud": ["Azure", "Microsoft Foundry", "Cosmos DB", "Copilot Studio", "Power Platform", "Power Automate", "SharePoint", "Dataverse"],
+  "Governance & Security": ["Power Platform Admin Center", "DLP Policies", "Security Groups", "Environment Controls", "Licensing Analysis"]
 };
 
 const PROJECTS = [
   {
-    id: "enterprise-copilot",
-    title: "Enterprise Copilot & Automation",
-    type: "Enterprise AI",
-    description: "AI-powered Copilot agents and workflow automation for enterprise business operations.",
-    tags: ["Copilot Studio", "Power Automate", "SharePoint", "Dataverse"],
+    id: "hr-automation-agent",
+    title: "HR Automation AI Agent",
+    type: "AI HR Automation",
+    description: "An AI-powered HR automation solution handling employee time-tracking, leave workflows, and notifications integrated with Jibble API, SharePoint, and Dataverse.",
+    tags: ["Copilot Studio", "Power Automate", "Jibble API", "SharePoint", "Dataverse"],
     featured: true,
-    problem: "Business teams needed conversational access to enterprise information and repeatable workflows for sales operations, approvals, notifications, and data synchronization.",
-    solution: "Designed Copilot Studio topic flows and prompt logic, connected enterprise data through SharePoint and Dataverse, and implemented Power Automate workflows for business processes.",
-    architecture: ["Business User", "Copilot Studio", "SharePoint / Dataverse", "Power Automate", "Enterprise Systems"],
+    problem: "HR departments spend considerable time manually processing employee time-tracking, leave requests, attendance verifications, and notification updates.",
+    solution: "Built an AI-powered conversational agent in Copilot Studio connected via Power Automate flows to Jibble API for time tracking and leave management, using SharePoint and Dataverse for structured employee data and process auditing.",
+    architecture: ["Employee / Conversational Interface", "Microsoft Copilot Studio", "Power Automate Flows", "Jibble API Integration", "SharePoint & Dataverse Backend"],
     outcomes: [
-      "Built conversational topic flows for business use cases",
-      "Integrated structured enterprise data retrieval",
-      "Automated approvals, notifications and synchronization workflows",
-      "Worked with stakeholders to translate requirements into scalable automation"
+      "Jibble API integration for clock-in and time-entry automation",
+      "Automated leave and time-off request processing workflows",
+      "Configured automated employee notifications and manager approvals",
+      "Structured employee business processes in SharePoint and Dataverse",
+      "Designed intuitive Copilot Studio conversational interface topics"
     ]
   },
   {
-    id: "hr-automation",
-    title: "HR Automation Agent",
-    type: "AI Automation",
-    description: "An AI-assisted HR workflow concept connecting conversational interaction with business automation.",
-    tags: ["AI Agents", "Power Automate", "Dataverse", "API Integration"],
+    id: "ai-sales-lead-management",
+    title: "AI Sales & Lead Management Agent",
+    type: "AI Sales Automation",
+    description: "AI-driven sales automation system managing high-volume leads, AI qualification, email outreach, response detection, and contract monitoring.",
+    tags: ["Copilot Studio", "Power Automate", "Dataverse", "SharePoint", "AI"],
     featured: true,
-    problem: "HR teams often spend time handling repetitive employee requests and operational workflows manually.",
-    solution: "Created an agent-led automation pattern where conversational requests can trigger structured workflows, retrieve business data, and route actions through enterprise automation.",
-    architecture: ["Employee", "AI Agent", "Power Automate", "Business API", "Dataverse / SharePoint"],
+    problem: "Sales teams struggle with manual lead qualification, slow response times, fragmented customer data across systems, and delayed contract monitoring.",
+    solution: "Designed an AI-driven sales automation platform leveraging Dataverse for managing thousands of leads, SharePoint as a knowledge source, Copilot Studio for agent interactions, and 9 automated Power Automate flows for full lead lifecycle management.",
+    architecture: ["Lead Source Ingestion", "Dataverse Lead Repository", "AI Lead Qualification Engine", "Automated Outreach & Response Detection", "Contract Kickoff & Deal Automation"],
     outcomes: [
-      "Demonstrates agent + workflow orchestration",
-      "Designed around enterprise data access",
-      "Separates conversational reasoning from deterministic automation"
+      "Automated lead ingestion, processing, and industry/lead matching",
+      "Implemented AI-powered lead qualification and scoring",
+      "Built automated email outreach campaigns with response detection",
+      "Streamlined deal-won workflows and automated contract kickoff",
+      "Engineered 5 custom Copilot topics supported by 9 automated Power Automate flows"
     ]
   },
   {
-    id: "rag-assistant",
-    title: "RAG Knowledge Assistant",
-    type: "LLM Application",
-    description: "A retrieval-augmented generation application focused on grounded answers from a private knowledge base.",
-    tags: ["Python", "RAG", "LangChain", "Vector DB"],
+    id: "enterprise-copilot-governance",
+    title: "Enterprise Copilot Governance",
+    type: "AI Security & Governance",
+    description: "Enterprise governance controls and security architecture for organization-wide Copilot adoption, restricting environments, DLP connectors, and maker permissions.",
+    tags: ["Power Platform", "Copilot Studio", "Power Platform Admin Center", "DLP", "Security Groups"],
     featured: true,
-    problem: "General-purpose LLMs can produce answers that are not grounded in an organization's own documents.",
-    solution: "Designed a RAG pipeline that processes source documents, creates embeddings, retrieves relevant context, and passes grounded context to an LLM.",
-    architecture: ["User", "API", "Document Processing", "Embeddings", "Vector Store", "Retriever", "LLM"],
+    problem: "Enterprise AI adoption requires strict guardrails around maker permissions, connector access, data security policies, and environment provisioning to mitigate risk.",
+    solution: "Implemented enterprise governance controls across Microsoft Power Platform and Copilot Studio, restricting agent creation to authorized maker security groups, configuring DLP policies, and disabling unmanaged trial provisioning.",
+    architecture: ["Power Platform Admin Center", "Copilot Maker Security Group", "Data Loss Prevention (DLP) Policies", "Restricted Environments", "Governance Architecture"],
     outcomes: [
-      "Grounds responses in retrieved knowledge",
-      "Demonstrates the full AI application lifecycle",
-      "Provides a foundation for enterprise knowledge assistants"
+      "Established Copilot maker security group to restrict creation rights",
+      "Configured environment governance and fine-grained DLP policy controls",
+      "Enforced connector restrictions and restricted environment creation",
+      "Disabled unauthorized self-service and trial provisioning",
+      "Conducted Copilot access and licensing analysis for Power Platform governance architecture"
     ]
   },
   {
-    id: "copilot-governance",
-    title: "Copilot Governance & Tenant Controls",
-    type: "AI Governance",
-    description: "Enterprise governance approach for controlling AI maker access, environments, connectors, and data policies.",
-    tags: ["Power Platform", "DLP", "Security", "Governance"],
+    id: "rag-based-ai-chatbot",
+    title: "RAG-Based AI Chatbot",
+    type: "GenAI / LLM Engineering",
+    description: "Retrieval-Augmented Generation chatbot delivering accurate, grounded responses from custom knowledge bases while eliminating LLM hallucinations.",
+    tags: ["Python", "LangChain", "LLMs", "Vector Database", "RAG"],
+    featured: true,
+    problem: "Standard large language models often hallucinate or lack access to confidential, domain-specific private document repositories.",
+    solution: "Built a production-grade RAG chatbot using Python, LangChain, and Vector Databases to ingest custom documents, perform semantic search chunking, and generate context-grounded responses.",
+    architecture: ["Document Ingestion & Chunking", "Embedding Generation", "Vector Search Indexing", "Context Retrieval Engine", "LLM-Based Response Generation"],
+    outcomes: [
+      "Automated document ingestion, text processing, and semantic chunking",
+      "Generated vector embeddings for efficient semantic similarity search",
+      "Implemented accurate context retrieval pipelines for custom knowledge bases",
+      "Drastically reduced hallucination rates through grounded response generation",
+      "Demonstrated core AI/LLM engineering beyond low-code tools"
+    ]
+  },
+  {
+    id: "enterprise-ai-platform",
+    title: "Enterprise AI Platform",
+    type: "Enterprise Cloud AI",
+    description: "Hands-on exposure and contribution to an enterprise AI architecture built on Azure services, Microsoft Foundry, and Cosmos DB.",
+    tags: ["Azure", "Microsoft Foundry", "Cosmos DB", "Cloud AI", "Architecture"],
     featured: false,
-    problem: "Enterprise AI adoption requires guardrails around who can create agents, which connectors can be used, and how environments are provisioned.",
-    solution: "Implemented governance controls across the Power Platform administration model, including security groups, DLP restrictions and environment controls.",
-    architecture: ["Tenant", "Security Groups", "Power Platform Admin", "DLP Policies", "Environments"],
+    problem: "Enterprise AI systems require resilient cloud infrastructure, scalable database integration, robust repositories, and thorough technical documentation to support production deployment.",
+    solution: "Gained hands-on contribution and technical exposure within an enterprise AI platform ecosystem, focusing on Azure cloud services, Microsoft Foundry integration, Cosmos DB data layers, and repository maintenance.",
+    architecture: ["Client Applications", "Microsoft Foundry Layer", "Azure Cloud Services", "Cosmos DB Data Layer", "Enterprise Repositories"],
     outcomes: [
-      "Restricted agent creation to controlled makers",
-      "Applied connector and data-loss-prevention controls",
-      "Reduced uncontrolled environment and maker provisioning"
+      "Worked with enterprise codebase repositories and cloud architecture patterns",
+      "Analyzed Microsoft Foundry components and Azure service integrations",
+      "Studied Cosmos DB integration for scalable enterprise document/data storage",
+      "Contributed to technical documentation and project implementation specs",
+      "Gained deep exposure to large-scale enterprise AI platform infrastructure"
     ]
   },
   {
-    id: "computer-vision",
-    title: "Computer Vision Detection",
-    type: "Machine Learning",
-    description: "Computer vision experimentation using modern object-detection tooling.",
-    tags: ["YOLOv8", "Roboflow", "Computer Vision"],
+    id: "computer-vision-object-detection",
+    title: "Computer Vision Object Detection",
+    type: "Computer Vision / ML",
+    description: "End-to-end computer vision object detection pipeline built using YOLOv8, Roboflow, Python, PyTorch, and TensorFlow.",
+    tags: ["YOLOv8", "Roboflow", "Python", "TensorFlow", "PyTorch"],
     featured: false,
-    problem: "Visual inspection and detection problems require models that can identify target objects from images.",
-    solution: "Used a computer-vision workflow covering dataset preparation, model training and object detection experimentation.",
-    architecture: ["Images", "Dataset", "Training", "YOLOv8", "Detection"],
+    problem: "Visual recognition and target detection require specialized dataset preparation, annotation pipelines, and high-performance deep learning models.",
+    solution: "Developed a computer vision object detection project utilizing Roboflow for dataset preparation and annotation, and YOLOv8 for model training and evaluation.",
+    architecture: ["Dataset Ingestion", "Roboflow Image Annotation", "YOLOv8 Training Pipeline", "Inference Engine", "Model Evaluation"],
     outcomes: [
-      "Hands-on exposure to object detection",
-      "Experience with dataset and model workflow concepts"
+      "Prepared and annotated custom image datasets using Roboflow",
+      "Trained YOLOv8 deep learning models for accurate target object detection",
+      "Evaluated model performance using precision/recall metrics",
+      "Developed an end-to-end computer vision pipeline from raw data to inference",
+      "Demonstrated practical computer vision and traditional ML experience"
+    ]
+  },
+  {
+    id: "personal-ai-developer-portfolio",
+    title: "Personal AI & Developer Portfolio",
+    type: "Web Engineering",
+    description: "Custom personal website designed and deployed through GitHub Pages to showcase AI/automation projects, skills, and engineering journey.",
+    tags: ["HTML", "CSS", "JavaScript", "GitHub Pages", "AI tools"],
+    featured: false,
+    problem: "Highlighting complex enterprise AI agent projects, RAG architecture, and governance work requires a fast, responsive, custom portfolio platform.",
+    solution: "Designed and built a modern responsive portfolio using native web technologies (HTML, CSS, JavaScript) and deployed it seamlessly via GitHub Pages with automated updates.",
+    architecture: ["HTML5 Layout System", "CSS Design System", "Vanilla JS Render Engine", "GitHub Pages Deployment"],
+    outcomes: [
+      "Designed and deployed a responsive personal portfolio via GitHub Pages",
+      "Engineered dynamic Javascript data rendering for case studies and skills",
+      "Implemented SEO best practices, Open Graph tags, and structured JSON-LD",
+      "Continuously updating to showcase AI engineering projects and skills"
     ]
   }
 ];
