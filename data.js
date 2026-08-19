@@ -28,7 +28,7 @@ const PROJECTS = [
     featured: true,
     problem: "HR departments spend considerable time manually processing employee time-tracking, leave requests, attendance verifications, and notification updates.",
     solution: "Built an AI-powered conversational agent in Copilot Studio connected via Power Automate flows to Jibble API for time tracking and leave management, using SharePoint and Dataverse for structured employee data and process auditing.",
-    architecture: ["Employee / Conversational Interface", "Microsoft Copilot Studio", "Power Automate Flows", "Jibble API Integration", "SharePoint & Dataverse Backend"],
+    architecture: ["Employee Interface", "Microsoft Copilot Studio", "Power Automate Flows", "Jibble API Integration", "SharePoint & Dataverse Backend"],
     outcomes: [
       "Jibble API integration for clock-in and time-entry automation",
       "Automated leave and time-off request processing workflows",
@@ -42,35 +42,17 @@ const PROJECTS = [
     title: "AI Sales & Lead Management Agent",
     type: "AI Sales Automation",
     description: "AI-driven sales automation system managing high-volume leads, AI qualification, email outreach, response detection, and contract monitoring.",
-    tags: ["Copilot Studio", "Power Automate", "Dataverse", "SharePoint", "AI"],
+    tags: ["Copilot Studio", "Power Automate", "Dataverse", "SharePoint", "Python"],
     featured: true,
     problem: "Sales teams struggle with manual lead qualification, slow response times, fragmented customer data across systems, and delayed contract monitoring.",
     solution: "Designed an AI-driven sales automation platform leveraging Dataverse for managing thousands of leads, SharePoint as a knowledge source, Copilot Studio for agent interactions, and 9 automated Power Automate flows for full lead lifecycle management.",
-    architecture: ["Lead Source Ingestion", "Dataverse Lead Repository", "AI Lead Qualification Engine", "Automated Outreach & Response Detection", "Contract Kickoff & Deal Automation"],
+    architecture: ["Lead Source Ingestion", "Dataverse Repository", "AI Lead Qualification Engine", "Outreach & Response Detection", "Contract & Deal Automation"],
     outcomes: [
       "Automated lead ingestion, processing, and industry/lead matching",
       "Implemented AI-powered lead qualification and scoring",
       "Built automated email outreach campaigns with response detection",
       "Streamlined deal-won workflows and automated contract kickoff",
       "Engineered 5 custom Copilot topics supported by 9 automated Power Automate flows"
-    ]
-  },
-  {
-    id: "enterprise-copilot-governance",
-    title: "Enterprise Copilot Governance",
-    type: "AI Security & Governance",
-    description: "Enterprise governance controls and security architecture for organization-wide Copilot adoption, restricting environments, DLP connectors, and maker permissions.",
-    tags: ["Power Platform", "Copilot Studio", "Power Platform Admin Center", "DLP", "Security Groups"],
-    featured: true,
-    problem: "Enterprise AI adoption requires strict guardrails around maker permissions, connector access, data security policies, and environment provisioning to mitigate risk.",
-    solution: "Implemented enterprise governance controls across Microsoft Power Platform and Copilot Studio, restricting agent creation to authorized maker security groups, configuring DLP policies, and disabling unmanaged trial provisioning.",
-    architecture: ["Power Platform Admin Center", "Copilot Maker Security Group", "Data Loss Prevention (DLP) Policies", "Restricted Environments", "Governance Architecture"],
-    outcomes: [
-      "Established Copilot maker security group to restrict creation rights",
-      "Configured environment governance and fine-grained DLP policy controls",
-      "Enforced connector restrictions and restricted environment creation",
-      "Disabled unauthorized self-service and trial provisioning",
-      "Conducted Copilot access and licensing analysis for Power Platform governance architecture"
     ]
   },
   {
@@ -82,13 +64,31 @@ const PROJECTS = [
     featured: true,
     problem: "Standard large language models often hallucinate or lack access to confidential, domain-specific private document repositories.",
     solution: "Built a production-grade RAG chatbot using Python, LangChain, and Vector Databases to ingest custom documents, perform semantic search chunking, and generate context-grounded responses.",
-    architecture: ["Document Ingestion & Chunking", "Embedding Generation", "Vector Search Indexing", "Context Retrieval Engine", "LLM-Based Response Generation"],
+    architecture: ["Document Ingestion & Chunking", "Embedding Generation", "Vector Search Indexing", "Context Retrieval Engine", "LLM Response Generation"],
     outcomes: [
       "Automated document ingestion, text processing, and semantic chunking",
       "Generated vector embeddings for efficient semantic similarity search",
       "Implemented accurate context retrieval pipelines for custom knowledge bases",
       "Drastically reduced hallucination rates through grounded response generation",
       "Demonstrated core AI/LLM engineering beyond low-code tools"
+    ]
+  },
+  {
+    id: "enterprise-copilot-governance",
+    title: "Enterprise Copilot Governance",
+    type: "AI Security & Governance",
+    description: "Enterprise governance controls and security architecture for organization-wide Copilot adoption, restricting environments, DLP connectors, and maker permissions.",
+    tags: ["Power Platform", "Copilot Studio", "Power Platform Admin Center", "DLP", "Security Groups"],
+    featured: false,
+    problem: "Enterprise AI adoption requires strict guardrails around maker permissions, connector access, data security policies, and environment provisioning to mitigate risk.",
+    solution: "Implemented enterprise governance controls across Microsoft Power Platform and Copilot Studio, restricting agent creation to authorized maker security groups, configuring DLP policies, and disabling unmanaged trial provisioning.",
+    architecture: ["Power Platform Admin Center", "Copilot Maker Security Group", "Data Loss Prevention Policies", "Restricted Environments", "Governance Architecture"],
+    outcomes: [
+      "Established Copilot maker security group to restrict creation rights",
+      "Configured environment governance and fine-grained DLP policy controls",
+      "Enforced connector restrictions and restricted environment creation",
+      "Disabled unauthorized self-service and trial provisioning",
+      "Conducted Copilot access and licensing analysis for Power Platform governance architecture"
     ]
   },
   {
@@ -136,7 +136,7 @@ const PROJECTS = [
     featured: false,
     problem: "Highlighting complex enterprise AI agent projects, RAG architecture, and governance work requires a fast, responsive, custom portfolio platform.",
     solution: "Designed and built a modern responsive portfolio using native web technologies (HTML, CSS, JavaScript) and deployed it seamlessly via GitHub Pages with automated updates.",
-    architecture: ["HTML5 Layout System", "CSS Design System", "Vanilla JS Render Engine", "GitHub Pages Deployment"],
+    architecture: ["HTML5 Layout System", "CSS Design System", "Vanilla JS Engine", "GitHub Pages Deployment"],
     outcomes: [
       "Designed and deployed a responsive personal portfolio via GitHub Pages",
       "Engineered dynamic Javascript data rendering for case studies and skills",
@@ -150,7 +150,7 @@ const EXPERIENCE = [
   {
     role: "Artificial Intelligence Engineer",
     company: "ISmile Technologies",
-    period: "July 2025 – July 2026",
+    period: "AI Engineering & Enterprise Automation",
     points: [
       "Developed AI-powered Copilot agents using Copilot Studio integrated with SharePoint and Dataverse.",
       "Designed and implemented Power Automate workflows supporting sales operations, approvals, notifications, and data synchronization.",
@@ -159,28 +159,21 @@ const EXPERIENCE = [
     ]
   },
   {
-    role: "AI/Data Engineer",
+    role: "AI / Data Engineer",
     company: "ISmile Technologies",
-    period: "July 2025 – February 2026",
+    period: "AI & Data Solutions",
     points: [
-      "Worked across AI and data-focused initiatives while developing practical enterprise automation experience."
+      "Worked across AI and data-focused initiatives while developing practical enterprise automation experience.",
+      "Architected data pipelines, integrations, and intelligent automation workflows for enterprise client requirements."
     ]
   },
   {
     role: "Research & Development Specialist",
-    company: "One Oath",
-    period: "May 2023 – August 2023",
-    points: [
-      "Contributed to innovative research and collaborative problem-solving.",
-      "Gained exposure to emerging technologies and real-world applications."
-    ]
-  },
-  {
-    role: "Research & Development Intern",
     company: "One Oath Foundation",
-    period: "May 2023 – August 2023",
+    period: "AI & Machine Learning R&D",
     points: [
-      "Supported AI-focused research initiatives through exploratory data analysis and prototype model development."
+      "Supported AI-focused research initiatives through exploratory data analysis and prototype model development.",
+      "Contributed to innovative research and collaborative problem-solving across AI/ML domains."
     ]
   }
 ];
@@ -189,25 +182,26 @@ const BLOGS = [
   {
     slug: "ai-agents-vs-automation",
     title: "AI Agents vs. Automation: Where Should Each Be Used?",
-    date: "Coming soon",
+    date: "AI Engineering",
     category: "AI Engineering",
-    excerpt: "A practical framework for deciding when a business problem needs an AI agent, deterministic automation, or both.",
-    body: "This weekly series will cover practical AI engineering decisions, architecture patterns, lessons learned, and enterprise automation."
+    excerpt: "A practical framework for deciding when a business problem needs an autonomous AI agent, deterministic automation, or a hybrid model.",
+    body: "When designing enterprise solutions, one of the most fundamental architectural decisions is choosing between autonomous AI agents and deterministic workflow automation.\n\nAI agents excel at handling unstructured inputs, complex reasoning, dynamic decision routing, and conversational user interfaces. On the other hand, deterministic automations (like Power Automate flows or structured ETL pipelines) are essential for multi-step data transformations, transactional integrity, and rule-based system operations.\n\nThe most successful enterprise implementations combine both: utilizing Copilot agents for intent recognition and reasoning, backed by deterministic Power Automate or Python microservices for execution."
   },
   {
     slug: "rag-production-checklist",
     title: "A Practical RAG Production Checklist",
-    date: "Coming soon",
+    date: "RAG Architecture",
     category: "RAG",
-    excerpt: "The questions to answer before moving a retrieval-augmented application from demo to production.",
-    body: "Topics will include document ingestion, retrieval quality, evaluation, observability, security, and cost."
+    excerpt: "The critical engineering questions to answer before moving a retrieval-augmented generation application from demo to enterprise production.",
+    body: "Transitioning a Retrieval-Augmented Generation (RAG) prototype into a production-grade enterprise deployment requires moving far beyond basic vector search.\n\nKey architectural pillars include:\n1. Chunking Strategy: Choosing semantic vs fixed-size chunking based on document structure.\n2. Embedding Optimization: Selecting domain-appropriate embedding models.\n3. Hybrid Search: Combining sparse keyword retrieval (BM25) with dense vector search for high precision.\n4. Reranking & Context Trimming: Ensuring top-k results maximize relevance while staying within token budgets.\n5. Guardrails & Observability: Tracking hallucination metrics and enforcing strict enterprise data governance."
   },
   {
     slug: "copilot-governance",
     title: "Why Enterprise Copilot Needs Governance",
-    date: "Coming soon",
+    date: "Enterprise AI",
     category: "Enterprise AI",
-    excerpt: "AI adoption is not only about building agents. Access, data, connectors, environments, and policies matter.",
-    body: "A practical look at the governance layer around enterprise AI and Power Platform adoption."
+    excerpt: "Enterprise AI adoption is not only about building agents. Security controls, Data Loss Prevention (DLP), environment isolation, and maker policies matter.",
+    body: "Rapid adoption of Microsoft Copilot Studio and Power Platform across enterprise environments brings incredible productivity gains, but also creates security and compliance challenges if unmanaged.\n\nEstablishing strong governance requires:\n- Restricting agent creation to authorized Maker Security Groups.\n- Configuring granular Data Loss Prevention (DLP) connector policies.\n- Enforcing environment routing and disabling unmanaged trial provisioning.\n- Auditing connector permissions and data boundaries before tenant-wide rollouts."
   }
 ];
+
